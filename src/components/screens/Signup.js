@@ -39,7 +39,7 @@ const Signup = () => {
     }
 
     const uploadFields = () => {
-        fetch("/signup",{
+        fetch("https://instaclone98.onrender.com/signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

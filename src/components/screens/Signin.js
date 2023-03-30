@@ -10,7 +10,7 @@ const Signin = () => {
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
     const PostData = () =>{
-        fetch("http://localhost:4000/signin",{
+        fetch("https://instaclone98.onrender.com/signin",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

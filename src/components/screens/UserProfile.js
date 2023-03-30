@@ -31,7 +31,7 @@ const Profile = () => {
 
 
      const followUser = () => {
-         fetch('/follow',{
+         fetch('https://instaclone98.onrender.com/follow',{
              method:"put",
              headers:{
                  "Content-Type":"application/json",
@@ -59,7 +59,7 @@ const Profile = () => {
          })
      }
      const unfollowUser = () => {
-         fetch('/unfollow',{
+         fetch('https://instaclone98.onrender.com/unfollow',{
              method:"put",
              headers:{
                  "Content-Type":"application/json",

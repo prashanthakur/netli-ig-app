@@ -11,7 +11,7 @@ const CreatePost = () => {
     useEffect(()=>{
         //data post 
         if(url){
-            fetch("/createpost",{
+            fetch("https://instaclone98.onrender.com/createpost",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json",

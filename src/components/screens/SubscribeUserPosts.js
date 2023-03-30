@@ -19,7 +19,7 @@ const SubscribeUserPosts = () => {
     },[])
 
     const likePost = (id) => {
-        fetch('/like',{
+        fetch('https://instaclone98.onrender.com/like',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -44,7 +44,7 @@ const SubscribeUserPosts = () => {
         })
     }
     const unlikePost = (id) => {
-        fetch('/unlike',{
+        fetch('https://instaclone98.onrender.com/unlike',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -71,7 +71,7 @@ const SubscribeUserPosts = () => {
 
 
     const makeComment = (text,postId) => {
-        fetch('/comment',{
+        fetch('https://instaclone98.onrender.com/comment',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -99,7 +99,7 @@ const SubscribeUserPosts = () => {
 
 
     const deletePost = (postid) =>{
-        fetch(`/deletepost/${postid}`,{
+        fetch(`https://instaclone98.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
