@@ -8,7 +8,7 @@ const Profile = () => {
     const [url,setUrl] = useState(undefined)
     console.log("profilr",state)
     useEffect(()=>{
-        fetch('/mypost',{
+        fetch('https://instaclone98.onrender.com/mypost',{
             headers:{
                 "Authorization":"Bearer " + localStorage.getItem("jwt")
             }
@@ -34,7 +34,7 @@ const Profile = () => {
                 //console.log("image-update",data)
                 // localStorage.setItem("user",JSON.stringify({...state,pic:data.url}))
                 // dispatch({type:"UPDATEPIC",payload:data.url})
-                fetch('/updatepic',{
+                fetch('https://instaclone98.onrender.com/updatepic',{
                     method:"put",
                     headers:{
                         "Content-Type":"application/json",

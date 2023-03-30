@@ -7,7 +7,7 @@ const SubscribeUserPosts = () => {
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
     useEffect(()=>{
-        fetch('/getsubpost',{
+        fetch('https://instaclone98.onrender.com/getsubpost',{
             headers:{
                 "Authorization":"Bearer "+ localStorage.getItem("jwt")
             }

@@ -18,7 +18,7 @@ const Profile = () => {
     //console.log("profilr",state)
     //console.log(userid);
     useEffect(()=>{
-        fetch(`/user/${userid}`,{
+        fetch(`https://instaclone98.onrender.com/user/${userid}`,{
              headers:{
                  "Authorization":"Bearer " + localStorage.getItem("jwt")
              }
