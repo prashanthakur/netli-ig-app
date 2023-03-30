@@ -1,6 +1,7 @@
 import React , {useState,useEffect} from 'react'
 import { Link,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
+import Swal from 'sweetalert2'
 
 //const liveApiUrl = "https://instagramclone98.herokuapp.com/signup" 
 
@@ -54,9 +55,11 @@ const Signup = () => {
         .then(data=>{
             //console.log(data)
             if(data.error){
-                M.toast({html:data.error})
+                // M.toast({html:data.error})
+                Swal.fire({html:data.error})
             }else{
-                M.toast({html:data.message,classes:"#43a047 green darken-1"})
+                // M.toast({html:data.message,classes:"#43a047 green darken-1"})
+                Swal.fire({html:data.message})
                 history.push('/signin')
             }
             

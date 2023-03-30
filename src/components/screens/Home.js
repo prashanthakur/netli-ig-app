@@ -7,28 +7,28 @@ const Home = () => {
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
     useEffect(()=>{
-        // fetch('http://localhost:4000/allpost',{
-        //     mode: 'no-cors',
-        //     headers:{
-        //         "Authorization":"Bearer "+ localStorage.getItem("jwt")
-        //     }
-        // }).then(res=>res.json())
-        // .then(result=>{
-        //     console.log(result)
-        //     setData(result.posts)
-        // })
-        setTimeout(()=>{
-            fetch('https://instaclone98.onrender.com/allpost',{
-                mode: 'no-cors',
-                headers:{
-                    "Authorization":"Bearer "+ localStorage.getItem("jwt")
-                }
-            }).then(res=>res.json())
-            .then(result=>{
-                console.log(result)
-                setData(result.posts)
-            }) 
-        },5000)
+        console.warn("Bearer "+ localStorage.getItem("jwt"))
+        fetch('https://instaclone98.onrender.com/allpost',{
+            headers:{
+                "Authorization":"Bearer "+ localStorage.getItem("jwt")
+            }
+        }).then(res=>res.json())
+        .then(result=>{
+            console.log(result)
+            setData(result.posts)
+        })
+        // setTimeout(()=>{
+        //     fetch('https://instaclone98.onrender.com/allpost',{
+        //         mode: 'no-cors',
+        //         headers:{
+        //             "Authorization":"Bearer "+ localStorage.getItem("jwt")
+        //         }
+        //     }).then(res=>res.json())
+        //     .then(result=>{
+        //         console.log(result)
+        //         setData(result.posts)
+        //     }) 
+        // },5000)
     },[])
 
     const likePost = (id) => {

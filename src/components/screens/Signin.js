@@ -2,6 +2,7 @@ import React ,{useState,useContext} from 'react'
 import { Link ,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
 import {UserContext} from '../../App'
+import Swal from 'sweetalert2'
 
 //const liveurl = "https://instagramclone98.herokuapp.com/signin"
 const Signin = () => {
@@ -24,12 +25,14 @@ const Signin = () => {
         .then(data=>{
             console.log(data)
             if(data.error){
-                M.toast({html:data.error})
+                // M.toast({html:data.error})
+                Swal.fire({html:data.error})
             }else{
                 localStorage.setItem("jwt",data.token)
                 localStorage.setItem("user",JSON.stringify(data.user))
                 dispatch({type:"USER",payload:data.user})
-                M.toast({html:"SignedIn successfull"})
+                // M.toast({html:"SignedIn successfull"})
+                Swal.fire({html:"SignedIn successfull"})
                 history.push('/')
             }
             
