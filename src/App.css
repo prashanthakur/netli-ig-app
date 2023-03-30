@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+a{
+  color: black !important;
+}
+.navbar-brand {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 25px;
+}
+.logo-ig{
+  font-family: 'Grand Hotel', cursive;
+  font-size: 40px;
+}
+.login-card{
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  height: max-content;
+  margin: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.item{
+  width:30%;
+  margin-top: 10px;
+  height:150px;
+}
+.home-card{
+  max-width: 600px;
+  height:max-content;
+  margin:26px auto;
+  box-shadow: 2px 2px 10px gray;
+  padding:20px;
+}
+.card-content{
+  margin-top: 20px;
+}
+.card-image img{
+  width:100%;
+}
+.comment-input{
+  border-top:none!important;
+  background-color: #fff!important;
+  outline:none!important;
+  border-left:none!important;
+  border-right:none!important;
+  border-bottom:2px solid gray!important;
+  border-radius: 0px !important;
+}
+input[type="text"]{
+  width:100%;
+  padding:5px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  margin:10px auto;
+  border:1px solid #d1cbcb;
+}
+::placeholder{
+  color:gray;
+  font-size: 16px;
+  padding: 5px;
+}
+input[type="text"]:focus{
+  outline: 1px solid rgb(206, 199, 199);
+}
+input[type="file"]{
+  color: rgb(233, 74, 74);
+}
+.input-file-btn{
+  padding: 15px;
+  width:100%;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+.hearts{
+  font-size: 30px;
+  color:red;
+}
+.btn:hover{
+  background-color: #fff;
+  color:#000000;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+li:hover{
+  font-weight: bold;
+  transition: all 0.2s;
+}
+span{
+  cursor: pointer;
+}
+.cards h5{
+  margin: 0 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.custom-modal{
+  width:50%;
+  margin-left: 100px;
+  border-radius: 5px;
+}
+.modal-content{
+  padding:20px;
+}
