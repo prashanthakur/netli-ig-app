@@ -18,10 +18,10 @@ const Home = () => {
         //     setData(result.posts)
         // })
         setTimeout(()=>{
-            fetch('http://localhost:4000/allpost',{
+            fetch('https://instaclone98.onrender.com/allpost',{
                 mode: 'no-cors',
                 headers:{
-                    "Authorization":"Bearer "+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE3MjZkZGYzZjZjOTk0YmM5ODhiZWQiLCJpYXQiOjE2NzkyNTE3ODZ9.H04NBqRXeNAi8JWNkHVMZaODhxCBK_lQPKJxwqfiGTQ"
+                    "Authorization":"Bearer "+ localStorage.getItem("jwt")
                 }
             }).then(res=>res.json())
             .then(result=>{

@@ -12,6 +12,7 @@ const Signin = () => {
     const PostData = () =>{
         fetch("https://instaclone98.onrender.com/signin",{
             method:"post",
+            mode:"cors",
             headers:{
                 "Content-Type":"application/json"
             },
